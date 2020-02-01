@@ -8,6 +8,7 @@ public class PlayerRaycast : MonoBehaviour
     public float distanceToSee = 10f;
     RaycastHit whatWasHit;
     public Text interactionPrompt;
+    public Transform grabPoint;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +34,8 @@ public class PlayerRaycast : MonoBehaviour
                 interactionPrompt.text = "Click to pick up " + focusedObject.name;
                 if(Input.GetKey(KeyCode.Mouse0))
                 {
-                    Destroy(focusedObject);
+                    //Pick up object
+                    GetComponentInParent<ArmSwing>().GrabObject(focusedObject.transform);
                 }
             }
             else
