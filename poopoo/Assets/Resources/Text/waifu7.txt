@@ -1,7 +1,9 @@
 [NAME=Koneko] 
 
-The air around the area has gotten tense. People are getting anxious.
+I need these weapons fixed.
 
+The commander asked me get them to you.
 
+Heres your payment.
 
 EndQueue

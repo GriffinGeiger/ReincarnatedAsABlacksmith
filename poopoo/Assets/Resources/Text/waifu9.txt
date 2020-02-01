@@ -1,7 +1,9 @@
 [NAME=Senko] 
 
-The air around the area has gotten tense. People are getting anxious.
+My troops have been a bit tired recently and moral has been dropping.
 
+I really wanted to do something for them, so I wanted to get their weapons repaired.
 
+Later, I'll make a nice dinner for them too.
 
 EndQueue
