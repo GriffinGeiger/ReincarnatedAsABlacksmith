@@ -12,23 +12,23 @@ public class DialogueManager : MonoBehaviour
 
 
     private Queue<string> inputStream = new Queue<string>(); // stores dialogue
-   // private PlayerAnimController animController;
+    private CharacterController animController;
 
     private void Start()
     {
         CanvasBox.SetActive(false); // close the dialogue box on play
-     //   animController = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAnimController>();
+       animController = GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterController>();
     }
 
     private void DisablePlayerController()
     {
-       // animController.ForceIdle();
-        //animController.enabled = false;
+      
+        animController.enabled = false;
     }
     
     private void EnablePlayerController()
     {
-        //animController.enabled = true;
+        animController.enabled = true;
     }
 
     public void StartDialogue(Queue<string> dialogue)

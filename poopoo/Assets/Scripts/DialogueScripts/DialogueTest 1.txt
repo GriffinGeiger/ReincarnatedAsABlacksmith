@@ -1,0 +1,9 @@
+[NAME=costumer] Hello!
+
+I am part of the red kingdom.
+
+My sword broke please fix it.
+
+thank you.
+
+EndQueue
