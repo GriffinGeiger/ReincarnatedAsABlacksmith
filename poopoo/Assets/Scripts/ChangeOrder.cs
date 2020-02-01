@@ -39,7 +39,7 @@ public class ChangeOrder : MonoBehaviour
 
     // Testing dynamically updating chalk board
     IEnumerator updateOrder() {
-        if (Input.GetKeyDown("s")) {
+        if (Input.GetKeyDown("r")) {
             start = true;
         }
 
