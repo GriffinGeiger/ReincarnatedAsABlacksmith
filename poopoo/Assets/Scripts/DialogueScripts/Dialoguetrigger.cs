@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Dialoguetrigger : MonoBehaviour
 {
 
-    public TextAsset TextFileAsset; // your imported text file for your NPC
+    public TextAsset TextFileAsset; // your imported text file for your 
+    public Image Avatar;
     public bool TriggerWithButton;
     public GameObject optionalButtonIndicator;
     public Vector3 optionalIndicatorOffset = new Vector3(0, 0, 0);
@@ -15,10 +17,54 @@ public class Dialoguetrigger : MonoBehaviour
     private bool dialogueTiggered;
     private GameObject indicator;
 
+    /// <summary>
+    ///  all WAIFU IMAGES
+    /// 
+    /// </summary>
+    public TextAsset WT1;
+    public TextAsset WT2;
+    public TextAsset WT3;
+    public TextAsset WT4;
+    public TextAsset WT5;
+    public TextAsset WT6;
+    public TextAsset WT7;
+    public TextAsset WT8;
+    public TextAsset WT9;
+    public TextAsset WT10;
+    public TextAsset[] waifuDialog;
+
+    public Sprite s0;
+    public Sprite s1;
+    public Sprite s2;
+    public Sprite s3;
+    public Sprite s4;
+    public Sprite s5;
+    public Sprite s6;
+    public Sprite s7;
+    public Sprite s8;
+    public Sprite s9;
+    public Sprite s10;
+
+    public Sprite[] images;
 
     // Start is called before the first frame update
     void Start()
     {
+        waifuDialog = new TextAsset[10];
+        images = new Sprite[10];
+        fill_Arrays();
+
+        int num = UnityEngine.Random.Range(0,5);
+        int inum = UnityEngine.Random.Range(0, 5);
+        Debug.Log("/////////");
+
+        Debug.Log(inum);
+
+        Debug.Log("/////////");
+
+        TextFileAsset = waifuDialog[num];
+        Avatar.sprite = null;
+        Avatar.sprite = images[inum];
 
         if (optionalButtonIndicator != null)
         {
@@ -29,6 +75,35 @@ public class Dialoguetrigger : MonoBehaviour
         }
 
     }
+    void fill_Arrays()
+    {
+        waifuDialog[0] = WT1;
+        waifuDialog[1] = WT2;
+        waifuDialog[2] = WT3;
+        waifuDialog[3] = WT4;
+        waifuDialog[4] = WT5;
+       /* waifuDialog[5] = WT6;
+        waifuDialog[6] = WT7;
+        waifuDialog[7] = WT8;
+        waifuDialog[8] = WT9;
+        waifuDialog[9] = WT10;
+*/
+        images[0] = s0;
+        images[1] = s1;
+        images[2] = s2;
+        images[3] = s3;
+        images[4] = s4;
+        images[5] = s5;
+        images[6] = s6;
+        images[7] = s7;
+        images[8] = s8;
+        images[9] = s9;
+       // images[10] = s10;
+            
+       
+        
+    }
+
 
     void TriggerDialogue()
     {
