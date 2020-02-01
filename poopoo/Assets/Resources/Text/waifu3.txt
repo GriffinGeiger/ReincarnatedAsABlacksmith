@@ -1,0 +1,9 @@
+[NAME=Umeko] Is the smith here?
+
+All the other shops are booked and this one looked like it had some space.
+
+Heres my swords. I don't mind how long it takes as long as they are done well.
+
+Here's half your pay up front. Good luck.
+
+EndQueue
