@@ -33,7 +33,7 @@ public class FactionScoring : MonoBehaviour
             elfAvgScore /= elfWeaponCount;
 
             if (victoryReached() == 0) {
-                //End game
+                Debug.Log("ELF WIN");
             }
         }
         //Catgirls
@@ -44,7 +44,7 @@ public class FactionScoring : MonoBehaviour
             nekoAggScore += weaponScore;
             nekoAvgScore /= nekoWeaponCount;
             if (victoryReached() == 1) {
-                //End game
+                Debug.Log("NEKO");
             }
         }
         else {

@@ -5,33 +5,37 @@ using UnityEngine.UI;
 
 public class FillFactionBar : MonoBehaviour
 {
-    public FactionScoring factionScoring;
+    public ScoreManager factionScoring;
     public Image FillImg;
     private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        factionScoring = GetComponentInChildren<FactionScoring>();
+        factionScoring = GetComponentInChildren<ScoreManager>();
         slider = GetComponent<Slider>();
 
     }
-
     // Update is called once per frame
     void Update()
     {
-     float fillvalue = factionScoring._NekoAvg / factionScoring._ELFAvg;
+        if (slider == null)
+        {
+            Debug.Log("nil slider");
+        }
+
+        float fillvalue = factionScoring.difference;
         Debug.Log(fillvalue);
         slider.value = fillvalue;
 
 
-        if (Input.GetKeyDown("p"))
+        if (Input.GetKeyDown("1"))
         {
-            factionScoring.updateScore(0,1);
+            factionScoring.addScore(1,10);
             
         }
-        if (Input.GetKeyDown("u"))
+        if (Input.GetKeyDown("2"))
         {
-            factionScoring.updateScore(1, 1);
+            factionScoring.addScore(0, 10);
          
 
 
