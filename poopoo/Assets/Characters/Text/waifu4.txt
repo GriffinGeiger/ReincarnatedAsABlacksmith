@@ -1,7 +1,9 @@
-[NAME=Nanaka] 
+[NAME=Nanaka] Greetings!
 
-I need some swords fixed.
+I cant believe they eat pinaple on their pizza.
 
-Thanks.
+they are definitely in the wrong, this needs a war to stop them.
+
+Thank you, is time to show them the superior pizza topping.
 
 EndQueue

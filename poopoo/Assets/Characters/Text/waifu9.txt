@@ -1,9 +1,7 @@
-[NAME=Senko] 
-
-My troops have been a bit tired recently and moral has been dropping.
+[NAME=Senko] My troops have been a bit tired recently and moral has been dropping.
 
 I really wanted to do something for them, so I wanted to get their weapons repaired.
 
-Later, I'll make a nice dinner for them too.
+Later, I'll bake them some delicious raisin cookies later.
 
 EndQueue

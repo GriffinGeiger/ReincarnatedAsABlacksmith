@@ -1,7 +1,9 @@
-[NAME=Erina] 
+[NAME=Erina]Good evening.
 
-The air around the area has gotten tense. People are getting anxious.
+I cant believe they used my sword to cut a chocolate cake.
 
+Can you fix it?
 
+Chocolate is gross and should dissapear.
 
 EndQueue
