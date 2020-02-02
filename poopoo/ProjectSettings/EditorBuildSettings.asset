@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/IntroVid.unity
+    guid: 09bd286d03ab0a844814505f4dae2b68
+  - enabled: 1
+    path: Assets/Scenes/MainMenYou.unity
+    guid: 474c04b5c2becab4a916498c2362df1f
+  - enabled: 1
+    path: Assets/Scenes/GriffinScene.unity
+    guid: 7fa3e3dbd498fcc43ab908d99a181417
   m_configObjects: {}
