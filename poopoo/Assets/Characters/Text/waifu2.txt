@@ -1,0 +1,9 @@
+[NAME=Mai] Hey!
+
+I heard that I can get my weapons fixed here. 
+
+How quick can you get it done?
+
+That long? Well, I hope its good quality atleast.
+
+EndQueue
