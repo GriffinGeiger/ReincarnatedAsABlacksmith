@@ -7,7 +7,7 @@ public class HaloGradient : MonoBehaviour
 {
     [SerializeField] public bool _isEnabled = true;
     [SerializeField] private Color _color = Color.red;
-    [SerializeField] private float _size = 0.02f;
+    //[SerializeField] private float _size = 0.02f;
     //[SerializeField] public float _timeVar = 0;
     [SerializeField] public float _poundQuality = 0f;
     [SerializeField] public float _grindQuality = 0f;
@@ -53,7 +53,8 @@ public class HaloGradient : MonoBehaviour
 
     private void Update()
     {
-        SerializedObject halo = new SerializedObject(GetComponent("Halo"));
+       // SerializedObject halo = new SerializedObject(GetComponent("Halo"));
+        Light halo = GetComponent<Light>();
         //_timeVar += 0.02f;
         _isEnabled = false; // set true if in a state that needs it
 
@@ -208,11 +209,13 @@ public class HaloGradient : MonoBehaviour
 
         if (_broken)
             _color = new Color(139,0,0);
-        
-        halo.FindProperty("m_Size").floatValue = _size;
-        halo.FindProperty("m_Enabled").boolValue = _isEnabled;
-        halo.FindProperty("m_Color").colorValue = _color;
-        halo.ApplyModifiedProperties();
+        //halo.areaSize = _size;
+        halo.enabled = _isEnabled;
+        halo.color = _color;
+        //halo.FindProperty("m_Size").floatValue = _size;
+        //halo.FindProperty("m_Enabled").boolValue = _isEnabled;
+        //halo.FindProperty("m_Color").colorValue = _color;
+        //halo.ApplyModifiedProperties();
     }
 
     public void Pound()
