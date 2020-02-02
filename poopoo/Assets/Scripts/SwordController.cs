@@ -54,7 +54,7 @@ public class SwordController : MonoBehaviour
                 break;
             case SwordState.CoolingBath:
                 temperature -= bathCoolingRate *Time.deltaTime;
-                Debug.Log("Temperature " + temperature);
+                //Debug.Log("Temperature " + temperature);
 
                     if (temperature <= CoolingBath.cooledTemp)
                     {
@@ -67,7 +67,7 @@ public class SwordController : MonoBehaviour
                             coolingBonus = Mathf.Clamp((bathCoolingTemp / CoolingBath.goalTemperature), .4f, 1f);
                             ;
                         }
-                    Debug.Log("Cooling bonus: " + coolingBonus);
+                    //Debug.Log("Cooling bonus: " + coolingBonus);
                     CurrentState = SwordController.SwordState.Cooled;
                     bathCoolingTemp = 0f;
          
@@ -85,7 +85,7 @@ public class SwordController : MonoBehaviour
 
     void UpdateHaloState(SwordState newState)
     {
-        Debug.Log("Temp " + temperature + " , State: " + CurrentState);
+        //Debug.Log("Temp " + temperature + " , State: " + CurrentState);
         if (newState == SwordState.Pounding)
             pounded = true;
         HaloGradient[] hgs = GetComponentsInChildren<HaloGradient>();
