@@ -1,9 +1,0 @@
-[NAME=Koneko] 
-
-I need these weapons fixed.
-
-The commander asked me get them to you.
-
-Heres your payment.
-
-EndQueue
