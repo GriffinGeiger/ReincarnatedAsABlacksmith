@@ -9,17 +9,21 @@ public class PlayerRaycast : MonoBehaviour
     RaycastHit whatWasHit;
     public Text interactionPrompt;
     public Transform grabPoint;
+    private int layermask = 0;
     // Start is called before the first frame update
     void Start()
     {
-        
+        layermask  = 1 << 10;
+        layermask |= 1 << 11;
+        layermask |= 1 << 12;
+        layermask |= 1 << 13;
     }
 
     // Update is called once per frame
     void Update()
     {
         Debug.DrawRay(this.transform.position, this.transform.forward * distanceToSee, Color.cyan);
-        if (Physics.Raycast(this.transform.position, this.transform.forward,out whatWasHit, distanceToSee))
+        if (Physics.Raycast(this.transform.position, this.transform.forward,out whatWasHit, distanceToSee,layermask))
         {
             
             GameObject focusedObject = whatWasHit.collider.gameObject;

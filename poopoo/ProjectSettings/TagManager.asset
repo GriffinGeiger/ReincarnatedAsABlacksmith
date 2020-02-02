@@ -7,6 +7,8 @@ TagManager:
   - Grabable
   - Interactable
   - Hammer
+  - Sword
+  - Grindstone
   layers:
   - Default
   - TransparentFX
@@ -20,8 +22,8 @@ TagManager:
   - Player
   - SwordOnAnvil
   - Hammer
-  - 
-  - 
+  - Interactable
+  - Environment
   - 
   - 
   - 

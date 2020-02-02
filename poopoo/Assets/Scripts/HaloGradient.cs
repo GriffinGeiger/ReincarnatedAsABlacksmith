@@ -8,11 +8,20 @@ public class HaloGradient : MonoBehaviour
     [SerializeField] private bool _isEnabled = true;
     [SerializeField] private Color _color = Color.red;
     [SerializeField] private float _size = 0.02f;
-    [SerializeField] public float _timeVar = 0;
+    //[SerializeField] public float _timeVar = 0;
+    [SerializeField] private float _poundQuality = 0f;
+    [SerializeField] private float _grindQuality = 0f;
+    //If minimum gets passed then sword breaks.
+    public float _poundGrindQualityMinimum = -100f;
+    [SerializeField] private bool _broken = false;
+    public float _poundStrength = .2f;
+    public float _grindSpeed = .0001f;
+
     //public float timeVar { get { return _timeVar;  } }
     Gradient gradient;
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;
+    public SwordController.SwordState SwordState = SwordController.SwordState.RawAndCold;
 
     void Start()
     {
@@ -33,19 +42,169 @@ public class HaloGradient : MonoBehaviour
 
         gradient.SetKeys(colorKey, alphaKey);
 
-        _color = gradient.Evaluate(_timeVar);
+        //_color = gradient.Evaluate(_timeVar);
     }
 
+    bool poundedThisFrame = false;
+    bool grindedThisFrame = false;
 
     private void Update()
     {
-        //_timeVar += 0.02f;
-        if (_timeVar > 1f) _timeVar = 0;
-        _color = gradient.Evaluate(_timeVar);
         SerializedObject halo = new SerializedObject(GetComponent("Halo"));
+        //_timeVar += 0.02f;
+        _isEnabled = false; // set true if in a state that needs it
+
+        switch (SwordState)
+        {
+            case SwordController.SwordState.RawAndCold:
+                //Grindstone breaks instantly
+                //Pounding breaks instantly
+                if (grindedThisFrame)
+                {
+                    _broken = true;
+                    grindedThisFrame = false;
+                }
+                if(poundedThisFrame)
+                {
+                    _broken = true;
+                    poundedThisFrame = false;
+                }
+                break;
+            case SwordController.SwordState.Heating:
+                //Grindstone breaks instantly
+                //Pounding breaks
+                if (grindedThisFrame)
+                {
+                    _broken = true;
+                    grindedThisFrame = false;
+                }
+                if (poundedThisFrame)
+                {
+                    _broken = true;
+                    poundedThisFrame = false;
+                }
+
+                break;
+            case SwordController.SwordState.HeatedUp:
+                //Grindstone breaks
+                
+                if (grindedThisFrame)
+                {
+                    _broken = true;
+                    grindedThisFrame = false;
+                }
+                //Pounding degrades if not pounded on anvil
+                if (poundedThisFrame)
+                {
+                    //Subtract quality
+                    _poundQuality -= _poundStrength;
+                    poundedThisFrame = false;
+                }
+                break;
+                //In this state when on anvil
+            case SwordController.SwordState.Pounding:
+                //Grindstone breaks
+
+                if (grindedThisFrame)
+                {
+                    _broken = true;
+                    grindedThisFrame = false;
+                }
+                //Pounding works
+                if (poundedThisFrame)
+                {
+                    //Add quality
+                    _poundQuality += _poundStrength;
+                    poundedThisFrame = false;
+                }
+                _color = gradient.Evaluate(_poundQuality);
+                _isEnabled = true;
+                break;
+
+            case SwordController.SwordState.Cooled:
+                //Grinding Works 
+                
+                if (grindedThisFrame)
+                {
+                    //Add quality
+                    _grindQuality += _grindSpeed;
+                    grindedThisFrame = false;
+                }
+                //Pounding Breaks
+                if (poundedThisFrame)
+                {
+                    _broken = true;
+                    poundedThisFrame = false;
+                }
+                
+                break;
+                // On grindstone
+            case SwordController.SwordState.Grinding:
+                if (grindedThisFrame)
+                {
+                    //Add quality
+                    _grindQuality += _grindSpeed;
+                    grindedThisFrame = false;
+                }
+                //Pounding Breaks
+                if (poundedThisFrame)
+                {
+                    _broken = true;
+                    poundedThisFrame = false;
+                }
+                _color = gradient.Evaluate(_grindQuality);
+                _isEnabled = true;
+                break;
+            case SwordController.SwordState.Done:
+                
+                if (grindedThisFrame)
+                {
+                    //Add Quality
+                    _grindQuality += _grindSpeed;
+                    grindedThisFrame = false;
+                }
+                //Pounding breaks
+                if (poundedThisFrame)
+                {
+                    _broken = true;
+                    poundedThisFrame = false;
+                }
+                break;
+            default:
+                break;
+        }
+       /* if (_timeVar > 1f)
+        {
+            _timeVar = 0;
+            _broken = true;
+        }
+        */
+        if(_grindQuality > 1f || _poundQuality > 1f || 
+            _poundQuality <= _poundGrindQualityMinimum 
+            ||_grindQuality <= _poundGrindQualityMinimum)
+        {
+            Debug.Log("Halo broke: " + name);
+            _broken = true;
+            _grindQuality = 0f;
+            _poundQuality = 0f;
+        }
+
+        if (_broken)
+            _color = new Color(139,0,0);
+        
         halo.FindProperty("m_Size").floatValue = _size;
         halo.FindProperty("m_Enabled").boolValue = _isEnabled;
         halo.FindProperty("m_Color").colorValue = _color;
         halo.ApplyModifiedProperties();
+    }
+
+    public void Pound()
+    {
+        poundedThisFrame = true;
+    }
+
+    public void Grind()
+    {
+        grindedThisFrame = true;
     }
 }

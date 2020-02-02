@@ -5,7 +5,6 @@ using UnityEngine;
 public class GradientScript : MonoBehaviour
 {
     public Transform objectTransform;
-    public float temperature = 0;
     Gradient gradient;
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;

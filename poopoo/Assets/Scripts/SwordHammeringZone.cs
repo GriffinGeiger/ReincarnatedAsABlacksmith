@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SwordHammeringZone : MonoBehaviour
 {
+    private HaloGradient halo;
     // Start is called before the first frame update
     void Start()
     {
-        
+        halo = GetComponent<HaloGradient>();
     }
 
     // Update is called once per frame
@@ -20,7 +21,16 @@ public class SwordHammeringZone : MonoBehaviour
         if(other.gameObject.CompareTag("Hammer"))
         {
             Debug.Log("Hammer hit " + name);
-            GetComponent<HaloGradient>()._timeVar += .2f;
+            halo.Pound();
+        }
+
+    }
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.gameObject.CompareTag("Grindstone"))
+        {
+            Debug.Log("Grinding " + name);
+            halo.Grind();
         }
     }
 }

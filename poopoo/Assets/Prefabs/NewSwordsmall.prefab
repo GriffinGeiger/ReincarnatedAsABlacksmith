@@ -128,7 +128,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &705300041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -215,7 +221,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &968508639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -302,7 +314,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &878987599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -389,7 +407,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &575233610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -476,7 +500,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &142284583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -563,7 +593,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &905647640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -650,7 +686,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1348615425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -737,7 +779,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &743684239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -824,7 +872,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &394179398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -911,7 +965,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1728918519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -998,7 +1058,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1394007646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1085,7 +1151,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1626819814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1172,7 +1244,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &720222706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1259,7 +1337,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1951163936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1346,7 +1430,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &261209722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1433,7 +1523,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &342009211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1520,7 +1616,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &847910016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1607,7 +1709,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1864255025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1694,7 +1802,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1971771352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1781,7 +1895,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &497080611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1868,7 +1988,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &424243416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1955,7 +2081,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1007334274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2042,7 +2174,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &2128815785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2129,7 +2267,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1153410941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2216,7 +2360,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &482891253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2303,7 +2453,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &104541349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2390,7 +2546,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &320944859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2477,7 +2639,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &378976988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2564,7 +2732,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1556393087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2605,6 +2779,7 @@ GameObject:
   - component: {fileID: 1579144264}
   - component: {fileID: 1579144263}
   - component: {fileID: 1579144265}
+  - component: {fileID: 491221218}
   m_Layer: 11
   m_Name: NewSwordsmall
   m_TagString: Sword
@@ -2732,6 +2907,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HoldOffsetPos: {x: 0, y: 0, z: 0}
   HoldOffsetRot: {x: -35.885, y: 61.8, z: -70.73}
+--- !u!114 &491221218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7295535246307041269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9043a045d67de31479cf9a267f29e800, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CurrentState: 0
 --- !u!1 &7299926844580077308
 GameObject:
   m_ObjectHideFlags: 0
@@ -2793,7 +2981,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1805862505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2880,7 +3074,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1778706890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2967,7 +3167,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &2075535494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3054,7 +3260,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1816795488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3141,7 +3353,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &439894233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3228,7 +3446,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &710951485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3315,7 +3539,13 @@ MonoBehaviour:
   _isEnabled: 1
   _color: {r: 1, g: 0, b: 0, a: 1}
   _size: 0.2
-  _timeVar: 0
+  _poundQuality: 0
+  _grindQuality: 0
+  _poundGrindQualityMinimum: -1
+  _broken: 0
+  _poundStrength: 0.2
+  _grindSpeed: 0.001
+  SwordState: 0
 --- !u!65 &1930007823
 BoxCollider:
   m_ObjectHideFlags: 0
