@@ -2013,7 +2013,7 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.01
+  _grindSpeed: 0.1
   SwordState: 0
   SwordRef: {fileID: 0}
 --- !u!65 &424243416
@@ -2892,6 +2892,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectTransform: {fileID: 0}
   timeVar: 0
+  _kelvinFloor: 293
+  _kelvinDesired: 673
+  _kelvinCeiling: 2000
+  temperature: 0
 --- !u!54 &1579144264
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2948,7 +2952,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   temperature: 0
+  _kelvinRoom: 293
   heatedUpTemp: 300
+  _tempDecrement: 5
   coolingBonus: 0.3
   bathCoolingRate: 200
   bathCoolingTemp: 0
