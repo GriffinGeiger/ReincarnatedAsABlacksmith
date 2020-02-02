@@ -5,8 +5,8 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     
-    public int ElfWeapontotal;
-    public int NekoWeapontotal;
+    public static int ElfWeapontotal = 0;
+    public static int NekoWeapontotal = 0;
     //ID = 1
     public float ElfTotalScore;
     //ID = 0
@@ -23,6 +23,11 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         difference = ((NekoTotalScore / 100) - (ElfTotalScore / 100)+0.5f);
+        if (difference > 0.8)
+            Debug.Log("NEKO WIN"); //do Neko win
+        if (difference < 0.2)
+            Debug.Log("ELF WIN"); //do Elf win
+
     }
    public void addScore(int ID, float Weaponscore)
     {
