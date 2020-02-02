@@ -56,11 +56,7 @@ public class Dialoguetrigger : MonoBehaviour
 
         int num = UnityEngine.Random.Range(0,5);
         int inum = UnityEngine.Random.Range(0, 5);
-        Debug.Log("/////////");
 
-        Debug.Log(inum);
-
-        Debug.Log("/////////");
 
         TextFileAsset = waifuDialog[num];
         Avatar.sprite = null;
