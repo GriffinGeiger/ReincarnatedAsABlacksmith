@@ -4,7 +4,7 @@ using UnityEngine;
 using System.Reflection;
 using System;
 
-public class TemperScore : MonoBehaviour
+public class WeaponScore : MonoBehaviour
 {
     public Component[] halos;
     public float _poundScore = 0;
@@ -18,7 +18,7 @@ public class TemperScore : MonoBehaviour
         foreach (HaloGradient region in halos)
         {
             _poundScore += region._poundQuality;
-            _grindScore += region._poundQuality;
+            _grindScore += region._grindQuality;
         }
         _poundScore /= child_length;
         _grindScore /= child_length;
@@ -33,7 +33,7 @@ public class TemperScore : MonoBehaviour
         foreach (HaloGradient region in halos)
         {
             _poundScore += region._poundQuality;
-            _grindScore += region._poundQuality;
+            _grindScore += region._grindQuality;
         }
         _poundScore /= child_length;
         _grindScore /= child_length;
