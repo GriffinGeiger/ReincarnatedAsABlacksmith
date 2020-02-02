@@ -2605,7 +2605,7 @@ GameObject:
   - component: {fileID: 1579144264}
   - component: {fileID: 1579144263}
   - component: {fileID: 1579144265}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: NewSwordsmall
   m_TagString: Grabable
   m_Icon: {fileID: 0}
