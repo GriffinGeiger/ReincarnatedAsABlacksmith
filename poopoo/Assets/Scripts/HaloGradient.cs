@@ -7,7 +7,7 @@ public class HaloGradient : MonoBehaviour
 {
     [SerializeField] private bool _isEnabled = true;
     [SerializeField] private Color _color = Color.red;
-    [SerializeField] private float _size = 0.001f;
+    [SerializeField] private float _size = 0.02f;
     [SerializeField] public float _timeVar = 0;
     //public float timeVar { get { return _timeVar;  } }
     Gradient gradient;
