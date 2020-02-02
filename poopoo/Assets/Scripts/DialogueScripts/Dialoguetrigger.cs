@@ -162,7 +162,6 @@ public class Dialoguetrigger : MonoBehaviour
         }
 
         ChangeOrder.genOrder();
-
         dialogue.Enqueue("EndQueue");
     }
 
