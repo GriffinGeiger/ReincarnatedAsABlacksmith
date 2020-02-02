@@ -43,19 +43,34 @@ public class Dialoguetrigger : MonoBehaviour
     public Sprite s7;
     public Sprite s8;
     public Sprite s9;
-    public Sprite s10;
 
     public Sprite[] images;
+
+    public Material m0;
+    public Material m1;
+    public Material m2;
+    public Material m3;
+    public Material m4;
+    public Material m5;
+    public Material m6;
+    public Material m7;
+    public Material m8;
+    public Material m9;
+
+    public Material[] material;
+
+
 
     // Start is called before the first frame update
     void Start()
     {
         waifuDialog = new TextAsset[10];
         images = new Sprite[10];
+        material = new Material[10];
         fill_Arrays();
 
-        int num = UnityEngine.Random.Range(0,5);
-        int inum = UnityEngine.Random.Range(0, 5);
+        int num = UnityEngine.Random.Range(0, waifuDialog.Length);
+        int inum = UnityEngine.Random.Range(0, images.Length);
         Debug.Log("/////////");
 
         Debug.Log(inum);
@@ -65,6 +80,8 @@ public class Dialoguetrigger : MonoBehaviour
         TextFileAsset = waifuDialog[num];
         Avatar.sprite = null;
         Avatar.sprite = images[inum];
+        Debug.Log(material);
+        GetComponent<MeshRenderer>().material = this.material[inum];
 
         if (optionalButtonIndicator != null)
         {
@@ -82,12 +99,12 @@ public class Dialoguetrigger : MonoBehaviour
         waifuDialog[2] = WT3;
         waifuDialog[3] = WT4;
         waifuDialog[4] = WT5;
-       /* waifuDialog[5] = WT6;
+        waifuDialog[5] = WT6;
         waifuDialog[6] = WT7;
         waifuDialog[7] = WT8;
         waifuDialog[8] = WT9;
         waifuDialog[9] = WT10;
-*/
+        
         images[0] = s0;
         images[1] = s1;
         images[2] = s2;
@@ -98,9 +115,17 @@ public class Dialoguetrigger : MonoBehaviour
         images[7] = s7;
         images[8] = s8;
         images[9] = s9;
-       // images[10] = s10;
             
-       
+        material[0] = m0;
+        material[1] = m1;
+        material[2] = m2;
+        material[3] = m3;
+        material[4] = m4;
+        material[5] = m5;
+        material[6] = m6;
+        material[7] = m7;
+        material[8] = m8;
+        material[9] = m9;
         
     }
 
@@ -135,6 +160,9 @@ public class Dialoguetrigger : MonoBehaviour
                 }
             }
         }
+
+        ChangeOrder.genOrder();
+
         dialogue.Enqueue("EndQueue");
     }
 
