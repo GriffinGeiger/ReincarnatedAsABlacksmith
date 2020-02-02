@@ -46,42 +46,47 @@ public class Dialoguetrigger : MonoBehaviour
 
     public Sprite[] images;
 
-    public Material m0;
-    public Material m1;
-    public Material m2;
-    public Material m3;
-    public Material m4;
-    public Material m5;
-    public Material m6;
-    public Material m7;
-    public Material m8;
-    public Material m9;
+    // public Material m0;
+    // public Material m1;
+    // public Material m2;
+    // public Material m3;
+    // public Material m4;
+    // public Material m5;
+    // public Material m6;
+    // public Material m7;
+    // public Material m8;
+    // public Material m9;
 
-    public Material[] material;
+    // public Material[] material;
 
-
+    private int[] textPlacements;
+    private int[] imgPlacements;
 
     // Start is called before the first frame update
     void Start()
     {
+        // Fill in the arrays
+        textPlacements = new int[10];
+        imgPlacements = new int[10];
+
+        // Randomize the values within the arrays
+        textPlacements = randomizeValues(textPlacements);
+        imgPlacements = randomizeValues(imgPlacements);
+
+        // Create arrays for the assets
         waifuDialog = new TextAsset[10];
         images = new Sprite[10];
-        material = new Material[10];
+        // material = new Material[10];
         fill_Arrays();
 
-        int num = UnityEngine.Random.Range(0, waifuDialog.Length);
-        int inum = UnityEngine.Random.Range(0, images.Length);
-        Debug.Log("/////////");
-
-        Debug.Log(inum);
-
-        Debug.Log("/////////");
-
-        TextFileAsset = waifuDialog[num];
+        TextFileAsset = waifuDialog[textPlacements[0]];
         Avatar.sprite = null;
-        Avatar.sprite = images[inum];
-        Debug.Log(material);
-        GetComponent<MeshRenderer>().material = this.material[inum];
+        Avatar.sprite = images[imgPlacements[0]];
+
+        GetComponent<SpriteRenderer>().sprite = images[imgPlacements[0]];
+
+        // Debug.Log(material);
+        // GetComponent<MeshRenderer>().material = this.material[inum];
 
         if (optionalButtonIndicator != null)
         {
@@ -92,6 +97,24 @@ public class Dialoguetrigger : MonoBehaviour
         }
 
     }
+
+    // Generates randomize the numbers
+    private int[] randomizeValues(int[] array) {
+        for (int i = 0; i < array.Length; i++) {
+            array[i] = i;
+        }
+
+        for (int i = 0;i < array.Length;++i)
+        {
+            int randomIndex = Random.Range(0, array.Length);
+            int temp = array[randomIndex];
+            array[randomIndex] = array[i];
+            array[i] = temp;
+        }
+        
+        return array;
+    }
+
     void fill_Arrays()
     {
         waifuDialog[0] = WT1;
@@ -116,16 +139,16 @@ public class Dialoguetrigger : MonoBehaviour
         images[8] = s8;
         images[9] = s9;
             
-        material[0] = m0;
-        material[1] = m1;
-        material[2] = m2;
-        material[3] = m3;
-        material[4] = m4;
-        material[5] = m5;
-        material[6] = m6;
-        material[7] = m7;
-        material[8] = m8;
-        material[9] = m9;
+        // material[0] = m0;
+        // material[1] = m1;
+        // material[2] = m2;
+        // material[3] = m3;
+        // material[4] = m4;
+        // material[5] = m5;
+        // material[6] = m6;
+        // material[7] = m7;
+        // material[8] = m8;
+        // material[9] = m9;
         
     }
 
