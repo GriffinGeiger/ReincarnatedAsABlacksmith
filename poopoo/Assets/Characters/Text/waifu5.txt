@@ -1,0 +1,9 @@
+[NAME=Emilia] 
+
+I really hope the tension in the air fades. I want both sides to get along.
+
+I really don't want to fight, but we need something to defend ourselves.
+
+If you don't mind, could you fix some of my swords?
+
+EndQueue
