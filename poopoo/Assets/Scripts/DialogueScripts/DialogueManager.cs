@@ -66,6 +66,7 @@ public class DialogueManager : MonoBehaviour
         {
             string name = inputStream.Peek();
             name = inputStream.Dequeue().Substring(name.IndexOf('=') + 1, name.IndexOf(']') - (name.IndexOf('=') + 1));
+            Dialoguetrigger.waifuName = name;
             NameText.text = name;
             PrintDialogue(); // print the rest of this line
         }

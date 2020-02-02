@@ -20,7 +20,8 @@ public class Dialoguetrigger : MonoBehaviour
     public static bool orderComplete;
     public static bool orderAccepted;
     public static bool orderDialogue;
-
+    public static string waifuName;
+    public static int waifuFaction;
 
     /// <summary>
     ///  all WAIFU IMAGES
@@ -66,13 +67,30 @@ public class Dialoguetrigger : MonoBehaviour
 
     private int[] textPlacements;
     private int[] imgPlacements;
+    private int[] factionPlacements;
 
     // Start is called before the first frame update
     void Start()
     {
+        waifuFaction = -5;
+
         // Fill in the arrays
         textPlacements = new int[10];
         imgPlacements = new int[10];
+
+        factionPlacements = new int[10];
+
+        // Fill factions to appropriate things
+        for (int i = 0; i < 3; i++) {
+            factionPlacements[i] = 0;
+        }
+
+        factionPlacements[8] = 0;
+        factionPlacements[9] = 0;
+
+        for (int i = 3; i < 8; i++) {
+            factionPlacements[i] = 1;
+        }
 
         // Randomize the values within the arrays
         textPlacements = randomizeValues(textPlacements);
@@ -87,6 +105,9 @@ public class Dialoguetrigger : MonoBehaviour
         TextFileAsset = waifuDialog[textPlacements[0]];
         Avatar.sprite = null;
         Avatar.sprite = images[imgPlacements[0]];
+        waifuFaction = factionPlacements[imgPlacements[0]];
+
+        waifuName = "";
 
         GetComponent<SpriteRenderer>().sprite = images[imgPlacements[0]];
         GetComponent<BoxCollider>().isTrigger = true;
@@ -202,6 +223,9 @@ public class Dialoguetrigger : MonoBehaviour
     }
 
     IEnumerator newCharacter() {
+        if (ChangeOrder.swordsCreated >= ChangeOrder.swordsOrdered) {
+            orderComplete = true;
+        }
 
         if (Input.GetKeyDown("p") || orderComplete) {
 
@@ -210,12 +234,17 @@ public class Dialoguetrigger : MonoBehaviour
             TextFileAsset = waifuDialog[textPlacements[rndIndex]];
             Avatar.sprite = null;
             Avatar.sprite = images[imgPlacements[rndIndex]];
+            waifuFaction = factionPlacements[imgPlacements[rndIndex]];
+
             GetComponent<SpriteRenderer>().sprite = images[imgPlacements[rndIndex]];
             GetComponent<BoxCollider>().isTrigger = true;
+
+            Debug.Log("Sprite is a " + waifuFaction);
 
             orderAccepted = true;
             orderComplete = false;
             orderDialogue = true;
+            ChangeOrder.swordsCreated = 0;
         }
 
         if (!orderDialogue) {
@@ -238,7 +267,7 @@ public class Dialoguetrigger : MonoBehaviour
             // Debug.Log("Collision");
         }
     }
-
+   
     private void OnTriggerStay(Collider other)
     {
         // Debug.Log(other.name);

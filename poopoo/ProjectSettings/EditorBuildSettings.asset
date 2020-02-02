@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GriffinScene.unity
     guid: 7fa3e3dbd498fcc43ab908d99a181417
+  - enabled: 1
+    path: Assets/Scenes/Plot.unity
+    guid: 2f562beb21464a346a819280cdf0fd50
   m_configObjects: {}

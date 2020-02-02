@@ -42,5 +42,7 @@ public class ScoreManager : MonoBehaviour
             NekoTotalScore += Weaponscore;
         }
 
+        ChangeOrder.swordsCreated++;
+
     }
 }
