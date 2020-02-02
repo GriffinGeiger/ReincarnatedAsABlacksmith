@@ -8,18 +8,24 @@ public class Furnace : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         SwordController sword = other.transform.GetComponentInChildren<SwordController>();
-        sword.temperature += tempIncreaseSpeed;
-        sword.CurrentState = SwordController.SwordState.Heating;
+        if (sword != null)
+        {
+            sword.temperature += tempIncreaseSpeed * Time.fixedDeltaTime;
+            sword.CurrentState = SwordController.SwordState.Heating;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         SwordController sword = other.transform.GetComponentInChildren<SwordController>();
-        if (sword.temperature >= sword.heatedUpTemp)
+        if (sword != null)
         {
-            sword.CurrentState = SwordController.SwordState.HeatedUp;
+            if (sword.temperature >= sword.heatedUpTemp)
+            {
+                sword.CurrentState = SwordController.SwordState.HeatedUp;
+            }
+            else if (sword.temperature <= sword.heatedUpTemp)
+                sword.CurrentState = sword.CooledAmbiently();
         }
-        else
-            sword.CurrentState = SwordController.SwordState.RawAndCold;
     }
 }

@@ -22,9 +22,12 @@ public class HaloGradient : MonoBehaviour
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;
     public SwordController.SwordState SwordState = SwordController.SwordState.RawAndCold;
+    public SwordController SwordRef;
 
     void Start()
     {
+        SwordRef = GetComponentInParent<SwordController>();
+
         gradient = new Gradient();
         // Populate the color keys at the relative time 0 and 1 (0 and 100%)
         colorKey = new GradientColorKey[2];
@@ -110,11 +113,17 @@ public class HaloGradient : MonoBehaviour
                     _broken = true;
                     grindedThisFrame = false;
                 }
-                //Pounding works
+                //Pounding works if hot enough
                 if (poundedThisFrame)
                 {
-                    //Add quality
-                    _poundQuality += _poundStrength;
+                    if (SwordRef.temperature >= SwordRef.heatedUpTemp)
+                    {
+                        //Add quality
+                        _poundQuality += _poundStrength;
+                    }else
+                    {
+                        _poundQuality -= _poundStrength;
+                    }
                     poundedThisFrame = false;
                 }
                 _color = gradient.Evaluate(_poundQuality);
@@ -142,8 +151,15 @@ public class HaloGradient : MonoBehaviour
             case SwordController.SwordState.Grinding:
                 if (grindedThisFrame)
                 {
-                    //Add quality
-                    _grindQuality += _grindSpeed;
+                    if (SwordRef.temperature <= SwordRef.heatedUpTemp)
+                    {
+                        //Add quality
+                        _grindQuality += _grindSpeed;
+                    }
+                    else
+                    {
+                        _grindQuality -= _grindSpeed;
+                    }
                     grindedThisFrame = false;
                 }
                 //Pounding Breaks

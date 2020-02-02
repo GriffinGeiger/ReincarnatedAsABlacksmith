@@ -22,9 +22,10 @@ public class SwordLock : MonoBehaviour
         if (sword.gameObject.tag == "Sword")
         {
             sword.gameObject.layer = 10;
-            Debug.Log("parented");
-            
-            // Debug.Log("Collision");
+            SwordController sc = sword.GetComponent<SwordController>();
+            sc.CurrentState = (sc.temperature >= sc.heatedUpTemp) ?
+                SwordController.SwordState.Pounding : sc.CooledAmbiently() ;
+          
         }
     }
 
@@ -32,6 +33,9 @@ public class SwordLock : MonoBehaviour
     {
         if (sword.gameObject.tag == "Sword")
         {
+            SwordController sc = sword.GetComponent<SwordController>();
+            sc.CurrentState = (sc.temperature >= sc.heatedUpTemp) ?
+                SwordController.SwordState.HeatedUp :SwordController.SwordState.Cooled;
             sword.gameObject.layer = 11;
         }
         
