@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class SwordController : MonoBehaviour
 {
-    public float temperature;
-    public float heatedUpTemp;
-    public bool readyForGrinding; 
+    public float temperature = 0f;
+    public float heatedUpTemp = 300f;
+    private bool pounded;
+    public float temperBonus = .1f; //Increases based on temperature when dipped in the slime
     public enum SwordState
     {
         RawAndCold,
@@ -17,6 +18,7 @@ public class SwordController : MonoBehaviour
         Grinding,
         Done
     }
+
 
     public SwordState CurrentState;
 
@@ -52,10 +54,18 @@ public class SwordController : MonoBehaviour
 
     void UpdateHaloState(SwordState newState)
     {
+        Debug.Log("Temp " + temperature + " , State: " + CurrentState);
+        if (newState == SwordState.Pounding)
+            pounded = true;
         HaloGradient[] hgs = GetComponentsInChildren<HaloGradient>();
         foreach(HaloGradient hg in hgs)
         {
             hg.SwordState = newState;
+            
         }
+    }
+    public SwordState CooledAmbiently()
+    {
+        return pounded ? SwordState.Cooled : SwordState.RawAndCold;
     }
 }
