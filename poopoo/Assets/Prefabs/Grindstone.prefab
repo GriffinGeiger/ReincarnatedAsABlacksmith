@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6148820319170584301}
   - component: {fileID: 230120198240816007}
+  - component: {fileID: 1628630754}
   m_Layer: 0
   m_Name: Grinder
   m_TagString: Grindstone
@@ -45,6 +46,19 @@ CapsuleCollider:
   m_Height: 0.56
   m_Direction: 1
   m_Center: {x: 0, y: 0.8130628, z: 0}
+--- !u!65 &1628630754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3942137037727998602}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.16609707, y: 0.15604325, z: 0.1577057}
+  m_Center: {x: 0.016041279, y: 0.91029304, z: 0.2263466}
 --- !u!1 &6676457300699407998
 GameObject:
   m_ObjectHideFlags: 0
@@ -57,6 +71,8 @@ GameObject:
   - component: {fileID: 6676457300702771838}
   - component: {fileID: 6676457300701673662}
   - component: {fileID: 6676457302092951867}
+  - component: {fileID: 389403321}
+  - component: {fileID: 389403322}
   m_Layer: 0
   m_Name: Grindstone
   m_TagString: Untagged
@@ -139,3 +155,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.62891674, y: 0.8137463, z: 0.8012047}
   m_Center: {x: 0.022385133, y: 0.40687296, z: 0.00087533}
+--- !u!65 &389403321
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676457300699407998}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1910965, y: 1.5602171, z: 0.9646427}
+  m_Center: {x: -0.005563736, y: 0.78010845, z: 0.08259411}
+--- !u!114 &389403322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6676457300699407998}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cee296440736ca49807bf0bdce775eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
