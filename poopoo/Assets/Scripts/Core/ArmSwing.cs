@@ -50,15 +50,19 @@ public class ArmSwing : MonoBehaviour
 
     public void GrabObject(Transform objectToGrab)
     {
-        HeldObject = objectToGrab.gameObject;
-        heldObjectScale = objectToGrab.localScale;
-        objectToGrab.SetParent(GrabPoint.transform);
-        objectToGrab.position = GrabPoint.transform.position;
-        objectToGrab.rotation = GrabPoint.transform.rotation;
-        //objectToGrab.gameObject.GetComponent<Rigidbody>().isKinematic = true;
-        FixedJoint joint = objectToGrab.gameObject.AddComponent<FixedJoint>();
-        joint.connectedBody = Arm.GetComponent<Rigidbody>();
-        holding = true;
+        if (!holding)
+        {
+            HeldObject = objectToGrab.gameObject;
+            heldObjectScale = objectToGrab.localScale;
+            Vector3 HoldObjectPos = HeldObject.GetComponent<Grabable>().HoldOffsetPos;
+            Vector3 HoldObjectRot = HeldObject.GetComponent<Grabable>().HoldOffsetRot;
+            objectToGrab.SetParent(GrabPoint.transform);
+            objectToGrab.position = GrabPoint.transform.position + HoldObjectPos;
+            objectToGrab.rotation = GrabPoint.transform.rotation * Quaternion.Euler(HoldObjectRot);
+            FixedJoint joint = objectToGrab.gameObject.AddComponent<FixedJoint>();
+            joint.connectedBody = Arm.GetComponent<Rigidbody>();
+            holding = true;
+        }
         
 
     }
