@@ -7,7 +7,8 @@ using System;
 public class TemperScore : MonoBehaviour
 {
     public Component[] halos;
-    public float score = 0;
+    public float _poundScore = 0;
+    public float _grindScore = 0;
     public float child_length = 0;
     // Start is called before the first frame update
     void Start()
@@ -16,21 +17,25 @@ public class TemperScore : MonoBehaviour
         child_length = halos.Length;
         foreach (HaloGradient region in halos)
         {
-            score += region._timeVar;
+            _poundScore += region._poundQuality;
+            _grindScore += region._poundQuality;
         }
-        score /= child_length;
+        _poundScore /= child_length;
+        _grindScore /= child_length;
     }
 
     // Update is called once per frame
     void Update()
     {
         halos = GetComponentsInChildren<HaloGradient>();
-        score = 0;
+        _poundScore = 0;
         child_length = halos.Length;
         foreach (HaloGradient region in halos)
         {
-            score += region._timeVar;
+            _poundScore += region._poundQuality;
+            _grindScore += region._poundQuality;
         }
-        score /= child_length;
+        _poundScore /= child_length;
+        _grindScore /= child_length;
     }
 }

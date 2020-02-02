@@ -5,12 +5,12 @@ using UnityEditor;
 
 public class HaloGradient : MonoBehaviour
 {
-    [SerializeField] private bool _isEnabled = true;
+    [SerializeField] public bool _isEnabled = true;
     [SerializeField] private Color _color = Color.red;
     [SerializeField] private float _size = 0.02f;
     //[SerializeField] public float _timeVar = 0;
-    [SerializeField] private float _poundQuality = 0f;
-    [SerializeField] private float _grindQuality = 0f;
+    [SerializeField] public float _poundQuality = 0f;
+    [SerializeField] public float _grindQuality = 0f;
     //If minimum gets passed then sword breaks.
     public float _poundGrindQualityMinimum = -100f;
     [SerializeField] private bool _broken = false;
