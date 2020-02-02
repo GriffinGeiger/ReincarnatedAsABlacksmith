@@ -19,6 +19,7 @@ public class Dialoguetrigger : MonoBehaviour
 
     public static bool orderComplete;
     public static bool orderAccepted;
+    public static bool orderDialogue;
 
 
     /// <summary>
@@ -88,10 +89,12 @@ public class Dialoguetrigger : MonoBehaviour
         Avatar.sprite = images[imgPlacements[0]];
 
         GetComponent<SpriteRenderer>().sprite = images[imgPlacements[0]];
+        GetComponent<BoxCollider>().isTrigger = true;
 
         orderComplete = false;
         orderAccepted = true;
-        
+        orderDialogue = true;
+
         // Debug.Log(material);
         // GetComponent<MeshRenderer>().material = this.material[inum];
 
@@ -192,7 +195,6 @@ public class Dialoguetrigger : MonoBehaviour
         }
 
         dialogue.Enqueue("EndQueue");
-
     }
 
     void Update() {
@@ -209,8 +211,15 @@ public class Dialoguetrigger : MonoBehaviour
             Avatar.sprite = null;
             Avatar.sprite = images[imgPlacements[rndIndex]];
             GetComponent<SpriteRenderer>().sprite = images[imgPlacements[rndIndex]];
+            GetComponent<BoxCollider>().isTrigger = true;
+
             orderAccepted = true;
             orderComplete = false;
+            orderDialogue = true;
+        }
+
+        if (!orderDialogue) {
+            GetComponent<BoxCollider>().isTrigger = false;
         }
 
         yield return new WaitForSeconds(1);
