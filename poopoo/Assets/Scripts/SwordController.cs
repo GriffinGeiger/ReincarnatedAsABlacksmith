@@ -9,7 +9,7 @@ public class SwordController : MonoBehaviour
     public float heatedUpTemp = 300f;
     public float _tempDecrement = 5f;
     private bool pounded;
-    public float coolingBonus = .3f; //Increases based on temperature when dipped in the slime
+    public float coolingBonus = .4f; //Increases based on temperature when dipped in the slime
     public float bathCoolingRate = 10f;
     public float bathCoolingTemp = 0f;
     public enum SwordState

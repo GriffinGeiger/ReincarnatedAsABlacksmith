@@ -107,7 +107,7 @@ public class HaloGradient : MonoBehaviour
                 //In this state when on anvil
             case SwordController.SwordState.Pounding:
                 //Grindstone breaks
-
+                
                 if (grindedThisFrame)
                 {
                     _broken = true;
@@ -116,6 +116,7 @@ public class HaloGradient : MonoBehaviour
                 //Pounding works if hot enough
                 if (poundedThisFrame)
                 {
+                    
                     if (SwordRef.temperature >= SwordRef.heatedUpTemp)
                     {
                         //Add quality
@@ -217,10 +218,12 @@ public class HaloGradient : MonoBehaviour
     public void Pound()
     {
         poundedThisFrame = true;
+        _grindQuality = 0f;
     }
 
     public void Grind()
     {
         grindedThisFrame = true;
+        Debug.Log("Grinding dat brass");
     }
 }
