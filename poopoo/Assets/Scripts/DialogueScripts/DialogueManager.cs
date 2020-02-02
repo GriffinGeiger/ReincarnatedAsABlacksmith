@@ -52,6 +52,11 @@ public class DialogueManager : MonoBehaviour
     {
         if (inputStream.Peek().Contains("EndQueue")) // special phrase to stop dialogue
         {
+            if (Dialoguetrigger.orderAccepted) {
+                ChangeOrder.genOrder();
+                Dialoguetrigger.orderAccepted = false;
+            }
+            
             inputStream.Dequeue(); // Clear Queue
             EndDialogue();
         }

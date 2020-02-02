@@ -191,12 +191,8 @@ public class Dialoguetrigger : MonoBehaviour
             }
         }
 
-        if (orderAccepted) {
-            ChangeOrder.genOrder();
-            orderAccepted = false;
-        }
-
         dialogue.Enqueue("EndQueue");
+
     }
 
     void Update() {
