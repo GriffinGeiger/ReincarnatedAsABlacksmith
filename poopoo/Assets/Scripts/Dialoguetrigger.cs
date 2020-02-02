@@ -20,7 +20,7 @@ public class Dialoguetrigger : MonoBehaviour
     public static bool orderComplete;
     public static bool orderAccepted;
     public static bool orderDialogue;
-
+    public static string waifuName;
 
     /// <summary>
     ///  all WAIFU IMAGES
@@ -87,6 +87,7 @@ public class Dialoguetrigger : MonoBehaviour
         TextFileAsset = waifuDialog[textPlacements[0]];
         Avatar.sprite = null;
         Avatar.sprite = images[imgPlacements[0]];
+        waifuName = "";
 
         GetComponent<SpriteRenderer>().sprite = images[imgPlacements[0]];
         GetComponent<BoxCollider>().isTrigger = true;
@@ -202,6 +203,9 @@ public class Dialoguetrigger : MonoBehaviour
     }
 
     IEnumerator newCharacter() {
+        if (ChangeOrder.swordsCreated >= ChangeOrder.swordsOrdered) {
+            orderComplete = true;
+        }
 
         if (Input.GetKeyDown("p") || orderComplete) {
 
@@ -216,6 +220,7 @@ public class Dialoguetrigger : MonoBehaviour
             orderAccepted = true;
             orderComplete = false;
             orderDialogue = true;
+            ChangeOrder.swordsCreated = 0;
         }
 
         if (!orderDialogue) {
