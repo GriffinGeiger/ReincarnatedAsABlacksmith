@@ -31,7 +31,14 @@ public class ScoreReport : MonoBehaviour
             grind = score._grindScore + 1;
             coolMultiplier = sword.GetComponent<SwordController>().coolingBonus + 1;
             float final = (tempering + grind) * coolMultiplier;
-            Debug.Log(final);
+            ScoreManager[] myItems = FindObjectsOfType(typeof(ScoreManager)) as ScoreManager[];
+            FactionTag factionInfo = sword.GetComponent<FactionTag>();
+            foreach (ScoreManager item in myItems)
+            {
+                item.addScore(factionInfo.faction, final);
+                Debug.Log(final + " Elves: " + item.ElfTotalScore + " Not Elves: " + item.NekoTotalScore);
+            }
+            Destroy(sword.gameObject);
         }
     }
 

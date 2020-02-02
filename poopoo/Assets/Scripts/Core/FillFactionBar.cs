@@ -18,13 +18,9 @@ public class FillFactionBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (slider == null)
-        {
-            Debug.Log("nil slider");
-        }
 
         float fillvalue = factionScoring.difference;
-        Debug.Log(fillvalue);
+        //Debug.Log(fillvalue);
         slider.value = fillvalue;
 
 

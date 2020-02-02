@@ -24,7 +24,7 @@ public class ScoreManager : MonoBehaviour
     {
         difference = ((NekoTotalScore / 100) - (ElfTotalScore / 100)+0.5f);
     }
-   public void addScore(int ID, int Weaponscore)
+   public void addScore(int ID, float Weaponscore)
     {
         if (ID == 1)
         {
