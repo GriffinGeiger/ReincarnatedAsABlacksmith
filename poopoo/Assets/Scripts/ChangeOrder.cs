@@ -11,6 +11,8 @@ public class ChangeOrder : MonoBehaviour
     public static int difficulty;
     public static int swordsOrdered;
     public static bool start;
+    public static int swordsCreated;
+
     // Change the text
     private string text;
 
@@ -24,6 +26,7 @@ public class ChangeOrder : MonoBehaviour
         start = false;
         difficulty = 0;
         swordsOrdered = 0;
+        swordsCreated = -1;
     }
 
     // Update is called once per frame
@@ -59,6 +62,8 @@ public class ChangeOrder : MonoBehaviour
             for (int i = 0; i < swordsOrdered; i++) {
                 Instantiate(sword, new Vector3(i * 0.5F + 1, .09F, -4), Quaternion.identity);
             }
+
+            swordsCreated = 0;
         }
             
         /* 

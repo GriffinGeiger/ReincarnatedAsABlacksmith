@@ -202,6 +202,9 @@ public class Dialoguetrigger : MonoBehaviour
     }
 
     IEnumerator newCharacter() {
+        if (ChangeOrder.swordsCreated >= ChangeOrder.swordsOrdered) {
+            orderComplete = true;
+        }
 
         if (Input.GetKeyDown("p") || orderComplete) {
 
@@ -216,6 +219,7 @@ public class Dialoguetrigger : MonoBehaviour
             orderAccepted = true;
             orderComplete = false;
             orderDialogue = true;
+            ChangeOrder.swordsCreated = 0;
         }
 
         if (!orderDialogue) {
