@@ -39,7 +39,7 @@ public class HaloGradient : MonoBehaviour
 
     private void Update()
     {
-        _timeVar += 0.02f;
+        //_timeVar += 0.02f;
         if (_timeVar > 1f) _timeVar = 0;
         _color = gradient.Evaluate(_timeVar);
         SerializedObject halo = new SerializedObject(GetComponent("Halo"));

@@ -28,7 +28,7 @@ public class PlayerRaycast : MonoBehaviour
                 interactionPrompt.text = "Press 'E' to Interact";
 
             }
-            else if(focusedObject.CompareTag("Grabable"))
+            else if(focusedObject.layer == 8)
             {
                 interactionPrompt.enabled = true;
                 interactionPrompt.text = "Click to pick up " + focusedObject.name;
