@@ -5,7 +5,6 @@ using UnityEngine;
 public class GradientScript : MonoBehaviour
 {
     public Transform objectTransform;
-    public float temperature = 0;
     Gradient gradient;
     GradientColorKey[] colorKey;
     GradientAlphaKey[] alphaKey;
@@ -16,6 +15,10 @@ public class GradientScript : MonoBehaviour
     GradientColorKey[] colorKey3;
     GradientAlphaKey[] alphaKey3;
     public float timeVar = 0;
+    public float _kelvinFloor = 293f;
+    public float _kelvinDesired = 673f;
+    public float _kelvinCeiling = 2000f;
+    public float temperature = 0;
     Material material;
     private Color orange = new Color(1.0f, 0.64f, 0.0f, 1.0f);
 
@@ -55,9 +58,9 @@ public class GradientScript : MonoBehaviour
         gradient3 = new Gradient();
         // Populate the color keys at the relative time 0 and 1 (0 and 100%)
         colorKey3 = new GradientColorKey[2];
-        colorKey3[0].color = orange;
+        colorKey3[0].color = Color.black;
         colorKey3[0].time = 0.0f;
-        colorKey3[1].color = Color.black;
+        colorKey3[1].color = orange;
         colorKey3[1].time = 2.0f;
 
         // Populate the alpha  keys at relative time 0 and 1  (0 and 100%)
@@ -86,8 +89,9 @@ public class GradientScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeVar += 0.01f;
-        if (timeVar > 2f) timeVar = 0;
+        temperature = GetComponent<SwordController>().temperature;
+        timeVar = (temperature - _kelvinFloor) / (_kelvinDesired - _kelvinFloor);
+        if (timeVar > 2f) timeVar = 2f;
 
         material.EnableKeyword("_EMISSION");
         material.SetColor("_EmissionColor", gradient3.Evaluate(timeVar));
