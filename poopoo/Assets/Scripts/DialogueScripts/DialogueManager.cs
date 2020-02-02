@@ -55,6 +55,8 @@ public class DialogueManager : MonoBehaviour
             if (Dialoguetrigger.orderAccepted) {
                 ChangeOrder.genOrder();
                 Dialoguetrigger.orderAccepted = false;
+                Dialoguetrigger.orderDialogue = false;
+
             }
             
             inputStream.Dequeue(); // Clear Queue
