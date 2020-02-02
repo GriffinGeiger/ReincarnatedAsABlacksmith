@@ -5,7 +5,7 @@ using UnityEditor;
 
 public class HaloGradient : MonoBehaviour
 {
-    [SerializeField] private bool _isEnabled = true;
+    [SerializeField] public bool _isEnabled = false;
     [SerializeField] private Color _color = Color.red;
     [SerializeField] private float _size = 0.02f;
     [SerializeField] public float _timeVar = 0;
