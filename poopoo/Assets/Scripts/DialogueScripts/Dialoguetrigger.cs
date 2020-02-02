@@ -17,6 +17,10 @@ public class Dialoguetrigger : MonoBehaviour
     private bool dialogueTiggered;
     private GameObject indicator;
 
+    public static bool orderComplete;
+    public static bool orderAccepted;
+
+
     /// <summary>
     ///  all WAIFU IMAGES
     /// 
@@ -85,6 +89,9 @@ public class Dialoguetrigger : MonoBehaviour
 
         GetComponent<SpriteRenderer>().sprite = images[imgPlacements[0]];
 
+        orderComplete = false;
+        orderAccepted = true;
+        
         // Debug.Log(material);
         // GetComponent<MeshRenderer>().material = this.material[inum];
 
@@ -184,11 +191,36 @@ public class Dialoguetrigger : MonoBehaviour
             }
         }
 
-        ChangeOrder.genOrder();
+        if (orderAccepted) {
+            ChangeOrder.genOrder();
+            orderAccepted = false;
+        }
+
         dialogue.Enqueue("EndQueue");
     }
 
+    void Update() {
+        StartCoroutine(newCharacter());
+    }
 
+    IEnumerator newCharacter() {
+
+        if (Input.GetKeyDown("p") || orderComplete) {
+
+            int rndIndex = Random.Range(1, textPlacements.Length);
+
+            TextFileAsset = waifuDialog[textPlacements[rndIndex]];
+            Avatar.sprite = null;
+            Avatar.sprite = images[imgPlacements[rndIndex]];
+            GetComponent<SpriteRenderer>().sprite = images[imgPlacements[rndIndex]];
+            orderAccepted = true;
+            orderComplete = false;
+        }
+
+        yield return new WaitForSeconds(1);
+
+
+    }
 
     private void OnTriggerEnter(Collider other)
     {
