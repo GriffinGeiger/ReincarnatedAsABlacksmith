@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class SwordHammeringZone : MonoBehaviour
 {
-    public  SenpaiSound Senpai;
+    public SenpaiSound[] Senpai;
+    //public  SenpaiSound[] Senpai  = FindObjectsOfType(typeof(SenpaiSound)) as SenpaiSound[];
     private HaloGradient halo;
     // Start is called before the first frame update
     void Start()
     {
         halo = GetComponent<HaloGradient>();
-        //Senpai = SenpaiSound.FindWithTag("Senpai");
-    }
+       Senpai= FindObjectsOfType(typeof(SenpaiSound)) as SenpaiSound[];
+}
 
     // Update is called once per frame
     void Update()
@@ -24,7 +25,7 @@ public class SwordHammeringZone : MonoBehaviour
         {
             Debug.Log("Hammer hit " + name);
             halo.Pound();
-            Senpai.Playsound();
+            Senpai[0].Playsound();
            
 
         }

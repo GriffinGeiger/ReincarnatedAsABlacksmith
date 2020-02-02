@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -53,7 +53,12 @@ public class SenpaiSound : MonoBehaviour
     {
         if (Online)
         {
-        Senpai[Random.Range(0, 10)].Play();
+            int x = Random.Range(0, 10);
+            if (true)
+            {
+                Senpai[x].Play();
+            }
+     
 
         }
     }
