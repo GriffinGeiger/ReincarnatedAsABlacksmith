@@ -14,6 +14,8 @@ public class ChangeOrder : MonoBehaviour
     // Change the text
     private string text;
 
+    public Transform sword;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +54,11 @@ public class ChangeOrder : MonoBehaviour
             difficulty = Random.Range(1, 5);
 
             // If the swords ordered is the default
-            swordsOrdered = Random.Range(1, 10);
+            swordsOrdered = Random.Range(1, 5);
+
+            for (int i = 0; i < swordsOrdered; i++) {
+                Instantiate(sword, new Vector3(i * 0.5F + 1, .09F, -4), Quaternion.identity);
+            }
         }
             
         /* 
