@@ -133,8 +133,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &705300041
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -226,8 +227,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &968508639
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -319,8 +321,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &878987599
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -412,8 +415,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &575233610
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -505,8 +509,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &142284583
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -598,8 +603,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &905647640
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -691,8 +697,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1348615425
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -784,8 +791,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &743684239
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -877,8 +885,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &394179398
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -970,8 +979,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1728918519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1063,8 +1073,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1394007646
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1156,8 +1167,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1626819814
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1249,8 +1261,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &720222706
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1342,8 +1355,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1951163936
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1435,8 +1449,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &261209722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1528,8 +1543,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &342009211
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1621,8 +1637,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &847910016
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1714,8 +1731,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1864255025
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1807,8 +1825,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1971771352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1900,8 +1919,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &497080611
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1993,8 +2013,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &424243416
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2086,8 +2107,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1007334274
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2179,8 +2201,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &2128815785
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2272,8 +2295,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1153410941
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2365,8 +2389,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &482891253
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2458,8 +2483,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &104541349
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2551,8 +2577,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &320944859
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2644,8 +2671,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &378976988
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2737,8 +2765,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1556393087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2862,7 +2891,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectTransform: {fileID: 0}
-  temperature: 0
   timeVar: 0
 --- !u!54 &1579144264
 Rigidbody:
@@ -2919,6 +2947,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9043a045d67de31479cf9a267f29e800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  temperature: 0
+  heatedUpTemp: 300
+  coolingBonus: 0.3
+  bathCoolingRate: 200
+  bathCoolingTemp: 0
   CurrentState: 0
 --- !u!1 &7299926844580077308
 GameObject:
@@ -2986,8 +3019,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1805862505
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3079,8 +3113,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1778706890
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3172,8 +3207,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &2075535494
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3265,8 +3301,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1816795488
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3358,8 +3395,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &439894233
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3451,8 +3489,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &710951485
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3544,8 +3583,9 @@ MonoBehaviour:
   _poundGrindQualityMinimum: -1
   _broken: 0
   _poundStrength: 0.2
-  _grindSpeed: 0.001
+  _grindSpeed: 0.01
   SwordState: 0
+  SwordRef: {fileID: 0}
 --- !u!65 &1930007823
 BoxCollider:
   m_ObjectHideFlags: 0
