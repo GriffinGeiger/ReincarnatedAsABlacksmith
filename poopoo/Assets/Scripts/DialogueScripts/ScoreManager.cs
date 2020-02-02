@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -24,9 +25,15 @@ public class ScoreManager : MonoBehaviour
     {
         difference = ((NekoTotalScore / 100) - (ElfTotalScore / 100)+0.5f);
         if (difference > 0.8)
+        {
             Debug.Log("NEKO WIN"); //do Neko win
+            SceneManager.LoadScene(5);
+        }
         if (difference < 0.2)
+        {
             Debug.Log("ELF WIN"); //do Elf win
+            SceneManager.LoadScene(4);
+        }
 
     }
    public void addScore(int ID, float Weaponscore)

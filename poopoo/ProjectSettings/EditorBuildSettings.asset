@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Plot.unity
     guid: 2f562beb21464a346a819280cdf0fd50
+  - enabled: 1
+    path: Assets/Scenes/ElfWin.unity
+    guid: faf673028cc4e104aac872eb5acd2df3
+  - enabled: 1
+    path: Assets/Scenes/DemiWin.unity
+    guid: 5d16ac17b5b655c4987b4df1cceed75e
   m_configObjects: {}
