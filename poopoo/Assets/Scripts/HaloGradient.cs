@@ -202,8 +202,8 @@ public class HaloGradient : MonoBehaviour
         {
             Debug.Log("Halo broke: " + name);
             _broken = true;
-            _grindQuality = 0f;
-            _poundQuality = 0f;
+            _grindQuality = -1f;
+            _poundQuality = -1f;
         }
 
         if (_broken)
