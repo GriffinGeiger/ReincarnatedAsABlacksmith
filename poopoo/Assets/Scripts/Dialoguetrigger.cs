@@ -238,7 +238,7 @@ public class Dialoguetrigger : MonoBehaviour
             // Debug.Log("Collision");
         }
     }
-
+   
     private void OnTriggerStay(Collider other)
     {
         // Debug.Log(other.name);
