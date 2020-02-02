@@ -5,7 +5,9 @@ using UnityEngine;
 public class SwordController : MonoBehaviour
 {
     public float temperature = 0f;
+    public float _kelvinRoom = 293f;
     public float heatedUpTemp = 300f;
+    public float _tempDecrement = 5f;
     private bool pounded;
     public float temperBonus = .1f; //Increases based on temperature when dipped in the slime
     public enum SwordState
@@ -25,6 +27,7 @@ public class SwordController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        temperature = _kelvinRoom;
         CurrentState = SwordState.RawAndCold;
     }
 
@@ -32,6 +35,11 @@ public class SwordController : MonoBehaviour
     void Update()
     {
         UpdateHaloState(CurrentState);
+        if (CurrentState == SwordState.HeatedUp)
+        {
+            if (temperature > _kelvinRoom)
+                temperature -= _tempDecrement * Time.deltaTime;
+        }
        /* switch (CurrentState)
         {
             case SwordState.RawAndCold:
