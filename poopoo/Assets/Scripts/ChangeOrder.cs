@@ -60,7 +60,8 @@ public class ChangeOrder : MonoBehaviour
             swordsOrdered = Random.Range(1, 5);
 
             for (int i = 0; i < swordsOrdered; i++) {
-                Instantiate(sword, new Vector3(i * 0.5F + 1, .09F, -4), Quaternion.identity);
+                Transform go = Instantiate(sword, new Vector3(i * 0.5F + 1, .09F, -4), Quaternion.identity);
+                go.name = "Sword for " + Dialoguetrigger.waifuName;
             }
 
             swordsCreated = 0;

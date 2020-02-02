@@ -20,7 +20,7 @@ public class Dialoguetrigger : MonoBehaviour
     public static bool orderComplete;
     public static bool orderAccepted;
     public static bool orderDialogue;
-
+    public static string waifuName;
 
     /// <summary>
     ///  all WAIFU IMAGES
@@ -87,6 +87,7 @@ public class Dialoguetrigger : MonoBehaviour
         TextFileAsset = waifuDialog[textPlacements[0]];
         Avatar.sprite = null;
         Avatar.sprite = images[imgPlacements[0]];
+        waifuName = "";
 
         GetComponent<SpriteRenderer>().sprite = images[imgPlacements[0]];
         GetComponent<BoxCollider>().isTrigger = true;
