@@ -38,6 +38,7 @@ public class ScoreReport : MonoBehaviour
                 item.addScore(factionInfo.faction, final);
                 Debug.Log(final + " Elves: " + item.ElfTotalScore + " Not Elves: " + item.NekoTotalScore);
             }
+            sword.gameObject.GetComponentInParent<ArmSwing>().DropObject();
             Destroy(sword.gameObject);
         }
     }

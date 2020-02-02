@@ -248,7 +248,7 @@ public class Dialoguetrigger : MonoBehaviour
         }
 
         if (!orderDialogue) {
-            GetComponent<BoxCollider>().isTrigger = false;
+                //GetComponent<BoxCollider>().isTrigger = false;
         }
 
         yield return new WaitForSeconds(1);
@@ -260,7 +260,7 @@ public class Dialoguetrigger : MonoBehaviour
     {
         if (other.gameObject.tag == "Player")
         {
-            if (!TriggerWithButton)
+            if (!TriggerWithButton || !orderDialogue)
             {
                 TriggerDialogue();
             }
