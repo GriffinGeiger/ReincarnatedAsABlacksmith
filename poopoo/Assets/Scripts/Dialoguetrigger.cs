@@ -239,7 +239,6 @@ public class Dialoguetrigger : MonoBehaviour
             GetComponent<SpriteRenderer>().sprite = images[imgPlacements[rndIndex]];
             GetComponent<BoxCollider>().isTrigger = true;
 
-            Debug.Log("Sprite is a " + waifuFaction);
 
             orderAccepted = true;
             orderComplete = false;

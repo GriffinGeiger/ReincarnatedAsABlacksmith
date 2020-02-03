@@ -44,7 +44,22 @@ public class SwordController : MonoBehaviour
             case SwordState.RawAndCold:
                 break;
             case SwordState.Heating:
-                
+                if(temperature >= 1500f)
+                {
+                    GetComponent<Deform.Deformable>().enabled = true;
+                    ArmSwing arm = FindObjectOfType<ArmSwing>();
+                    if(arm.HeldObject == this.gameObject)
+                        FindObjectOfType<ArmSwing>().DropObject();
+                    Destroy(GetComponent<Grabable>());
+                    
+                    //scoring when sword burns
+                    WeaponScore scoring = GetComponent<WeaponScore>();
+                    scoring._poundScore = -1.2f;
+                    scoring._grindScore = -1.2f;
+                    FindObjectOfType<ScoreReport>().ReportScore(this.gameObject);
+            
+                    CurrentState = SwordState.Done;
+                }
                 break;
             case SwordState.HeatedUp:
                 if (temperature > _kelvinRoom)

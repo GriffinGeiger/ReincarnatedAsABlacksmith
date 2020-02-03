@@ -12,7 +12,7 @@ public class ArmSwing : MonoBehaviour
     public float holdLow = -1.5f;
     private bool up = false;
     private bool prevUp = false;
-    private GameObject HeldObject;
+    public GameObject HeldObject;
     private Vector3 heldObjectScale;
     void Start()
     {

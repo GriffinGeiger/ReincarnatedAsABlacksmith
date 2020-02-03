@@ -10,9 +10,12 @@ public class Furnace : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         SwordController sword = other.transform.GetComponentInChildren<SwordController>();
+
         if (sword != null)
         {
-            if(!heatedSwords.ContainsKey(sword))
+            if (sword.CurrentState == SwordController.SwordState.Done)
+                return;
+            if (!heatedSwords.ContainsKey(sword))
             {
                 heatedSwords.Add(sword, Mathf.Exp((sword.temperature - 293 - 70) / 700));
             }

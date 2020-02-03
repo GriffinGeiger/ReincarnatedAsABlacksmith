@@ -18,7 +18,6 @@ public class SwordLock : MonoBehaviour
 
     private void OnTriggerEnter(Collider sword)
     {
-        Debug.Log(sword);
         if (sword.gameObject.tag == "Sword")
         {
             sword.gameObject.layer = 10;
