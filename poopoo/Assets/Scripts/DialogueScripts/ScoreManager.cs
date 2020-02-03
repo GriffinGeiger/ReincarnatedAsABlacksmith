@@ -17,13 +17,14 @@ public class ScoreManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ElfTotalScore = 1;
-        NekoTotalScore = 1;
+        ElfTotalScore = 10;
+        NekoTotalScore = 10;
     }
     // Update is called once per frame
     void Update()
     {
         difference = ((NekoTotalScore / 100) - (ElfTotalScore / 100)+0.5f);
+        Debug.Log("Difference between armies' mights: " + difference);
         if (difference > 0.8)
         {
             Debug.Log("NEKO WIN"); //do Neko win

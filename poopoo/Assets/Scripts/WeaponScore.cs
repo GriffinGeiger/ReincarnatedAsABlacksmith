@@ -20,8 +20,8 @@ public class WeaponScore : MonoBehaviour
             _poundScore += region._poundQuality;
             _grindScore += region._grindQuality;
         }
-        _poundScore /= child_length;
-        _grindScore /= child_length;
+       // _poundScore /= child_length;
+       // _grindScore /= child_length;
     }
 
     // Update is called once per frame
@@ -37,5 +37,6 @@ public class WeaponScore : MonoBehaviour
         }
         _poundScore /= child_length;
         _grindScore /= child_length;
+        
     }
 }

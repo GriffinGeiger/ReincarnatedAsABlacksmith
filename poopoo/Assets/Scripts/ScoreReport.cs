@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,24 +30,24 @@ public class ScoreReport : MonoBehaviour
         {
             //report score
             WeaponScore score = sword.GetComponent<WeaponScore>();
-            tempering = score._poundScore + 1;
-            grind = score._grindScore + 1;
+            tempering = score._poundScore * 2;
+            grind = score._grindScore * 2;
             coolMultiplier = sword.GetComponent<SwordController>().coolingBonus + 1;
-
-            float final = (tempering + grind) * coolMultiplier;
+            float multiplier = (tempering + grind) >= 0f ? coolMultiplier + 1: 2;
+            float final = (tempering + grind) * multiplier;
             if (ScoreDisplayText != null)
             {
-                ScoreDisplayText.text = "Form: " + tempering + "\n" +
-                                        "Sharpening: " + grind + "\n" +
-                                        "Tempering Multiplier: " + coolMultiplier + "\n" +
-                                        "Total Score: " + final;
+                ScoreDisplayText.text = "Form: " + Math.Round(tempering * 10,2) + "\n\n" +
+                                        "Sharpening: " + Math.Round(grind * 10,2) + "\n\n" +
+                                        "Tempering Multiplier: " + Math.Round(multiplier,2) + "\n\n" +
+                                        "Total Score: " + Math.Round(final * 10 ,2);
             }
             ScoreManager[] myItems = FindObjectsOfType(typeof(ScoreManager)) as ScoreManager[];
             FactionTag factionInfo = sword.GetComponent<FactionTag>();
             foreach (ScoreManager item in myItems)
             {
                 item.addScore(factionInfo.faction, final);
-                Debug.Log(final + " Elves: " + item.ElfTotalScore + " Not Elves: " + item.NekoTotalScore);
+                Debug.Log("Last Sword: " + final + " Elves: " + item.ElfTotalScore + " Not Elves: " + item.NekoTotalScore);
             }
             sword.gameObject.GetComponentInParent<ArmSwing>().DropObject();
             Destroy(sword.gameObject);
