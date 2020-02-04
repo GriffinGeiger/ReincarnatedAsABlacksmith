@@ -12,6 +12,7 @@ public class ChangeOrder : MonoBehaviour
     public static int swordsOrdered;
     public static bool start;
     public static int swordsCreated;
+    public Transform swordSpawnLocation;
 
     // Change the text
     private string text;
@@ -63,9 +64,9 @@ public class ChangeOrder : MonoBehaviour
             for (int i = 0; i < swordsOrdered; i++) {
                 Transform go = null;
                 if (Dialoguetrigger.waifuFaction == 0) {
-                    go = Instantiate(swordDemi, new Vector3(i * 0.5F + 1, .09F, -4), Quaternion.identity);
+                    go = Instantiate(swordDemi, new Vector3(i * 0.5F,0, 0) + swordSpawnLocation.position, Quaternion.identity);
                 } else {
-                    go = Instantiate(swordElf, new Vector3(i * 0.5F + 1, .09F, -4), Quaternion.identity);
+                    go = Instantiate(swordElf, new Vector3(i * 0.5F, 0, 0) + swordSpawnLocation.position, Quaternion.identity);
                 }
                 
                 go.name = "Sword for " + Dialoguetrigger.waifuName;

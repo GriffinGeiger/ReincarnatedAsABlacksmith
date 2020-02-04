@@ -1,9 +1,9 @@
 [NAME=Umaru] Blacksmith!
 
-Fix my sword. Fix my sword. I want my sword fixed.
+Fix my sword! Fix my sword! I want my sword fixed!
 
-Gotta show those weirdos on the other kingdom that cake is over rated.
+Sooner I can get it fixed, the sooner I can go back to fighting!
 
-Sooner I can get it fixed, the sooner I can go back to fighting.
+I'd much rather be fighting than waiting in this dungeon! Hurry UP!
 
 EndQueue

@@ -10,11 +10,18 @@ public class ScoreReport : MonoBehaviour
     public float grind;
     public float coolMultiplier;
     public Text ScoreDisplayText;
+    public Text HighScoreText;
+    public float[] HighScores = { 0, 0, 0, 0, 0 };
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        for (int i = 0; i < 5; i++)
+        {
+            Debug.Log("i " + i);
+            HighScores[i] = 0f;
+
+        }
     }
 
     // Update is called once per frame
@@ -68,5 +75,24 @@ public class ScoreReport : MonoBehaviour
         }
         sword.gameObject.GetComponentInParent<ArmSwing>()?.DropObject();
 
+        for(int i = 0; i < 5; i++)
+        {
+            if(final > HighScores[i])
+            {
+                for (int j = 4; j >= i; j--)
+                {
+                    if (j == 0)
+                        continue;
+                    HighScores[j] = HighScores[j - 1];
+                }
+                HighScores[i] = final;
+                break;
+            }
+        }
+        HighScoreText.text = "";
+        for (int i = 0; i < 5; i++)
+        {
+            HighScoreText.text += (i+1) + ")  " + Math.Round(HighScores[i],2) * 10 + "\n";
+        }
     }
 }
