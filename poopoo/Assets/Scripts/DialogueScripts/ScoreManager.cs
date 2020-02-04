@@ -24,7 +24,6 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         difference = ((NekoTotalScore / 100) - (ElfTotalScore / 100)+0.5f);
-        Debug.Log("Difference between armies' mights: " + difference);
         if (difference > 0.8)
         {
             Debug.Log("NEKO WIN"); //do Neko win
