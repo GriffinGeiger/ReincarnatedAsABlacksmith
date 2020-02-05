@@ -14,7 +14,7 @@ public class SenpaiSound : MonoBehaviour
     public AudioSource m8;
     public AudioSource m9;
     public AudioSource m10;
-
+    public AudioSource EasterEggSound;
 
     public AudioSource[] Senpai;
     public bool Online;
@@ -53,9 +53,21 @@ public class SenpaiSound : MonoBehaviour
     {
         if (Online)
         {
-            int x = Random.Range(0, 10);
+            int x = Random.Range(0, 11);
             if (true)
             {
+                if (x == 10)
+                {
+                    int y = Random.Range(0, 100);
+                    if (y == 1)
+                    {
+                        EasterEggSound.Play();
+                        Debug.Log("Moaning");
+                        return;
+                    }
+                    else
+                        x = Random.Range(0 , 10);
+                }
                 Senpai[x].Play();
             }
      
